@@ -1,0 +1,235 @@
+/* import fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Balsamiq+Sans&family=Bree+Serif&family=Fredoka+One&family=Great+Vibes&family=Oswald:wght@300&family=Pacifico&family=Sacramento&family=Sansita+Swashed&family=Space+Grotesk&family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@500&display=swap');
+
+.font-1 {
+font-family: 'Space Grotesk', sans-serif;
+}
+.font-2 {
+font-family: 'Balsamiq Sans', cursive;
+}
+.font-3 {
+font-family: 'Bree Serif', serif;
+}
+.font-4 {
+font-family: 'Acme', sans-serif;
+}
+.font-5 {
+font-family: 'Fredoka One', cursive;
+}
+.font-6 {
+font-family: 'Sacramento', cursive;
+}
+.font-7 {
+font-family: 'Great Vibes', cursive;
+}
+.font-8 {
+font-family: 'Oswald', sans-serif;
+}
+.font-9 {
+font-family: 'Yellowtail', cursive;
+}
+.font-10 {
+font-family: 'Sansita Swashed', cursive;
+}
+.font-11 {
+font-family: 'Pacifico', cursive;
+}
+.font-bangla {
+font-family: 'Baloo Da 2', cursive;
+}
+
+p{
+  font-size: 16px;
+}
+div{
+  font-size: 16px;
+}
+.full-height {
+  min-height: 100vh;
+  color: #000!important;
+  background-color: #f1f1f1!important
+}
+.text-shadow{
+  text-shadow: 1px 1px 1px black;
+}
+.box-shadow {
+  box-shadow: 0px 3px 10px;
+}
+.nav-image {
+  background-image: url("navbg.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bold {
+  font-weight: bold;
+}
+.nav-space {
+  height: 55px;
+}
+.bottom-right {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+.title-size{
+  font-size: 30px;
+}
+
+op-3 {
+  opacity: 0.3;
+}
+op-4 {
+  opacity: 0.4;
+}
+op-5 {
+  opacity: 0.5;
+}
+op-6{
+  opacity: 0.6;
+}
+op-7{
+  opacity: 0.7;
+}
+op-8{
+  opacity: 0.8;
+}
+op-9{
+  opacity: 0.9;
+}
+
+.bg-black{
+  background-color: black;
+}
+
+.grad-1{
+  /* Roseanna */
+  background-image: linear-gradient(to right, #ffafbd,  #ffc3a0);
+}
+.grad-2{
+  /* Sexy Blue */
+background-image: linear-gradient(to right, #2193b0,  #6dd5ed);
+}
+.grad-3{
+  /* Purple Love */
+background-image: linear-gradient(to right, #cc2b5e,  #753a88);
+}
+.grad-4{
+  /* Piglet */
+background-image: linear-gradient(to right, #ee9ca7,  #ffdde1);
+}
+.grad-5{
+  /* A Lost Memory */
+background-image: linear-gradient(to right, #de6262,  #ffb88c);
+}
+.grad-6{
+  /* Socialive */
+background-image: linear-gradient(to right, #06beb6,  #48b1bf);
+}
+.grad-7{
+  /* Cherry */
+background-image: linear-gradient(to right, #eb3349,  #f45c43);
+}
+.grad-8{
+  /* Pinky */
+background-image: linear-gradient(to right, #dd5e89,  #f7bb97);
+}
+.grad-9{
+  /* Lush */
+background-image: linear-gradient(to right, #56ab2f,  #a8e063);
+}
+.grad-10{
+  /* Kashmir */
+background-image: linear-gradient(to right, #614385,  #516395);
+}
+.grad-11{
+  /* Tranquil */
+background-image: linear-gradient(to right, #eecda3,  #ef629f);
+}
+.grad-12{
+  /* Green Beach */
+background-image: linear-gradient(to right, #02aab0,  #00cdac);
+}
+.grad-13{
+  /* Sha La La */
+background-image: linear-gradient(to right, #d66d75,  #e29587);
+}
+.grad-14{
+  /* Frost */
+background-image: linear-gradient(to right, #000428,  #004e92);
+}
+.grad-15{
+  /* Almost */
+background-image: linear-gradient(to right, #ddd6f3,  #faaca8);
+}
+.grad-16{
+  /* Virgin America */
+background-image: linear-gradient(to right, #7b4397,  #dc2430);
+}
+.grad-17{
+  /* Endless River */
+background-image: linear-gradient(to right, #43cea2,  #185a9d);
+}
+.grad-18{
+  /* Purple White */
+background-image: linear-gradient(to right, #ba5370,  #f4e2d8);
+}
+.grad-19{
+  /* Bloody Mary */
+background-image: linear-gradient(to right, #ff512f,  #dd2476);
+}
+.grad-20{
+  /* Can you feel the love tonight */
+background-image: linear-gradient(to right, #4568dc,  #b06ab3);
+}
+.grad-21{
+  /* Bourbon */
+background-image: linear-gradient(to right, #ec6f66,  #f3a183);
+}
+.grad-22{
+  /* Decent */
+background-image: linear-gradient(to right, #4ca1af,  #c4e0e5);
+}
+.grad-23{
+  /* Sweet Morning */
+background-image: linear-gradient(to right, #ff5f6d,  #ffc371);
+}
+.grad-24{
+  /* Scooter */
+background-image: linear-gradient(to right, #36d1dc,  #5b86e5);
+}
+.grad-25{
+  /* Celestial */
+background-image: linear-gradient(to right, #c33764,  #1d2671);
+}
+.grad-26{
+  /* Royal */
+background-image: linear-gradient(to right, #141e30,  #243b55);
+}
+.grad-27{
+  /* Ed’s Sunset Gradient */
+background-image: linear-gradient(to right, #ff7e5f,  #feb47b);
+}
+.grad-28{
+  /* Peach */
+background-image: linear-gradient(to right, #ed4264,  #ffedbc);
+}
+.grad-29{
+  /* Sea Blue */
+background-image: linear-gradient(to right, #2b5876,  #4e4376);
+}
+.grad-30{
+  /* Orange Coral */
+background-image: linear-gradient(to right, #ff9966,  #ff5e62);
+}
+.grad-31{
+  /* Aubergine */
+background-image: linear-gradient(to right, #aa076b,  #61045f);
+}
+.grad-32{
+background-image: linear-gradient(to right, #373B44, #4286f4 );
+}
+.grad-33{
+background-image: linear-gradient(to right, #1a2a6c, #b21f1f );
+}
