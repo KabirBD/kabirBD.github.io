@@ -86,7 +86,6 @@ function highlightLocation() {
     activity("home");
     weatherOfUserLocation();
     fetchQuote();
-    fetchNews();
     dateTimeView();
   }
 }
@@ -125,6 +124,19 @@ $(document).click(function(event) {
   $('#navbarNavAltMarkup').collapse('hide');
 });
 
+var lastScrollTop = 200;
+$('#navbarNavAltMarkup').scroll(function(event){
+var st = $(this).scrollTop();
+if (st > lastScrollTop){
+   // downscroll code
+  
+} else {
+  // upscroll code
+  $('#navbarNavAltMarkup').collapse('hide');
+  
+}
+lastScrollTop = st +200;
+});
 // timeView and dateView
 eval(function (p, a, c, k, e, d) {
   e = function (c) {
@@ -144,11 +156,13 @@ eval(function (p, a, c, k, e, d) {
   } return p
 }('8 y(f,9,b){0 5=n x();0 h=5.z();0 k=5.A()+1;0 g=5.w();0 3=9;7(!3){3=\'i\'}e{3=3.v()}0 l=\'q://i.r/s/u/m/?t=\'+h+\'&D=\'+k+\'&Q=\'+g+\'&9=\'+3;j(l,8(K,a){7(a){0 c=J.F(f);0 4="";7(b){4=b+" "}4+=a.I;c.N=4}})}8 j(o,d){0 2=n E();2.L(\'M\',o,C);2.p=\'m\';2.P=8(){0 6=2.6;7(6==B){d(H,2.O)}e{d(6)}};2.G()}', 53, 53, 'var||xhr|lang|dateString|today|status|if|function|language|result|prefix||callback|else|containerId|yyyy|dd|bangla|getJSON|mm|jsonUrl|json|new|url|responseType|https|plus|api|day|converttobangladate|toLowerCase|getFullYear|Date|dateToday|getDate|getMonth|200|true|month|XMLHttpRequest|getElementById|send|null|FullDate|document|err|open|GET|innerText|response|onload|year'.split('|'), 0, {}))
 function dateTimeView() {
+    document.getElementById("copyRightDate").innerHTML = moment().format('YYYY')
+  dateToday('dateViewBangla',
+    'bangla');
   setInterval(function() {
     document.getElementById("timeView").innerHTML = moment().format('h:mm:ss A')
     document.getElementById("dateView").innerHTML = moment().format('Do MMMM YYYY')
     document.getElementById("dayView").innerHTML = moment().format('dddd')
-    dateToday('dateViewBangla', 'bangla');
   },
     1000);
 }
@@ -193,7 +207,8 @@ function weatherFind(cityName) {
     document.getElementById("temp").innerHTML = Math.round(data.main.temp-273) +"°C";
     document.getElementById("weather").innerHTML = data.weather[0].description;
     document.getElementById("humidity").innerHTML = data.main.humidity + "%";
-    console.log(data);
+    document.getElementById("weatherLoadAnim").style.display = "none";
+    //console.log(data);
   })
   .catch(function() {
     console.log("Could load weather info");
@@ -230,59 +245,3 @@ function anotherQuote() {
   document.getElementById("quoteAuthor").innerHTML = quoteObject[rndm].author;
 
 }
-
-//Fetch News
-function fetchNews() {
-  fetch("https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=8aaec621a8724f9d8abcae844a64d211")
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(data) {
-    var articles = data.articles;
-    var list = "";
-    for (article of articles) {
-      //console.log(article);
-      list = list +`
-      <div class="col-md-6">
-      <div class="card m-1">
-      <img class="card-img-top" src="${article.urlToImage}" alt="Card image cap">
-      <div class="card-body">
-      <h5 class="card-title">${article.title}</h5>
-      <p class="card-text">
-      ${article.description}
-      <a href="${article.url}">Read more...</a>
-      </p>
-      <p class="card-text">
-      <small class="text-muted">Source: ${article.source.name}</small>
-      </p>
-      </div>
-      </div>
-      </div>`;
-    }
-    document.getElementById("newsHolder").innerHTML = list;
-  })
-  .catch(function() {
-    let catchMessage = `<div class="alert alert-warning text-center" role="alert" style="margin:auto auto;">
-    <h4 class="alert-heading">OPS!</h4>
-    <p>Weather information could not be loaded. Please retry to get weather information.</p>
-    <button type="button" onclick="fetchNews()" class="btn btn-outline-success">Retry</button>`;
-    document.getElementById("newsHolder").innerHTML = catchMessage;
-    console.log("Could not load news");
-  });
-}
-/*
-  <div class="col-md-6">
-            <div class="card">
-              <img class="card-img-top" src="me.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                </p>
-                <p class="card-text">
-                  <small class="text-muted">Last updated 3 mins ago</small>
-                </p>
-              </div>
-            </div>
-          </div>
-  */
