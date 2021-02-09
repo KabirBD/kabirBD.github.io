@@ -41,6 +41,18 @@
 
 <!-- 1st Row For Weather Date-time and Quote -->
 <div class="container-fluid py-2 grad-32">
+  <!-- for weather loading animation -->
+  <div id="weatherLoadAnim" class="text-center" style="margin: 1rem auto;">
+    <div class="spinner-grow text-success" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-grow text-danger" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-grow text-warning" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
   <div class="row font-2">
     <!-- Collum 1 for Weather -->
     <div class="col-md-4 card mx-2 my-2 p-0">
@@ -53,7 +65,7 @@
           <span id="location"></span>
           <span>
             <a class="" data-toggle="modal" data-target="#locationModal">
-              <i class="fas fa-thermometer"></i>
+              <i class="fas fa-edit"></i>
             </a>
             <!-- Location Modal -->
             <div class="modal fade" id="locationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -138,7 +150,7 @@
         <i class="fas fa-quote-right"></i> A quote for you
       </div>
       <div class="card-body overflow-auto">
-        <p id="quoteText">
+        <p id="quoteText" class="">
           You can't stop learning because life won't stop teachung you.
         </p>
         <footer class="blockquote-footer">
@@ -189,66 +201,6 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- 3rd Row For Latest news-->
-<div class="container-fluid py-3 grad-32">
-  <div class="row font-2">
-    <div class="col-md card mx-2 my-2 p-0">
-      <div class="card-header text-center text-white grad-19 p-2">
-        <i class="far fa-newspaper"></i> Latest news
-      </div>
-      <div class="card-body  p-0" style="max-height:70vh; overflow-x:hidden; overflow-y:scroll;">
-        <div class="row" id="newsHolder">
-          <!-- Here the news will be appended -->
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- 4th Row -->
-<div class="container">
-  <div class="row font-5">
-    <div class="col-md-6 card mx-1 my-2 p-0">
-      <div class="card-header text-center p-2">
-
-      </div>
-      <div class="card-body">
-
-      </div>
-    </div>
-    <div class="col card mx-1 my-2 p-0">
-      <div class="card-header text-center  p-2">
-
-      </div>
-      <div class="card-body">
-
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- 5th Row -->
-<div class="container">
-  <div class="row font-5">
-    <div class="col-md-6 card mx-1 my-2 p-0">
-      <div class="card-header text-center p-2">
-
-      </div>
-      <div class="card-body">
-
-      </div>
-    </div>
-    <div class="col card mx-1 my-2 p-0">
-      <div class="card-header text-center  p-2">
-
-      </div>
-      <div class="card-body">
-
       </div>
     </div>
   </div>
