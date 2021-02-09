@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="style.css" type="text/css" media="all" />
 
   <!-- Title of my site -->
-  <title>Kabir's Blog</title>
+  <title>Kabir BD</title>
 
 </head>
 
@@ -43,10 +43,10 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav font-3">
-        <a class="nav-item nav-link" id="home" href="#"> <i class="fas fa-home"></i>&nbsp;&nbsp; Home</a>
-        <a class="nav-item nav-link" id="about" href="#!about"> <i class="fas fa-address-card"></i>&nbsp;&nbsp; About</a>
-        <a class="nav-item nav-link" id="projects" href="#!projects"> <i class="fas fa-project-diagram"></i> &nbsp;&nbsp;Projects</a>
-        <a class="nav-item nav-link" id="blogs" href="#!blogs"> <i class="fas fa-tasks"></i>&nbsp;&nbsp; Blogs</a>
+        <a class="nav-item nav-link" id="home" href="#"> <i class="fas fa-home"></i>&nbsp;&nbsp; Home <br /></a>
+        <a class="nav-item nav-link" id="about" href="#!about"> <i class="fas fa-address-card"></i>&nbsp;&nbsp; About <br /></a>
+        <a class="nav-item nav-link" id="projects" href="#!projects"> <i class="fas fa-project-diagram"></i> &nbsp;&nbsp;Projects <br /></a>
+        <a class="nav-item nav-link" id="blogs" href="#!blogs"> <i class="fas fa-tasks"></i>&nbsp;&nbsp; Blogs <br /></a>
       </div>
     </div>
   </nav>
@@ -56,7 +56,7 @@
   </div>
 
   <!-- Place for Page view -->
-  <div class="" ng-view>
+  <div id="pageView" ng-view>
   </div>
 
   <!-- For messeneger icon -->
@@ -67,7 +67,7 @@
   <!-- Footer of the site -->
   <footer class=" font-2 container-fluid bg-dark my-0 py-3 text-light nav-image">
     <p class="mb-0 text-center">
-      © 2020-2021 kabirbd.github.io
+      © <span id="copyRightDate"></span> kabirbd.github.io
     </p>
     <p class="mb-0 font-8 text-center">
       <a href="#">Back to top </a>|
