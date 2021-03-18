@@ -1,0 +1,199 @@
+<!-- Row For Carousel -->
+<div class="container-fluid grad-3 p-0">
+<svg viewBox="0 0 366 200">
+  <g>
+    <path fill="#86D7DB" d="M0,143 88,107 224,153 348,109 366,123 366,256 0,256z" />
+    <path fill="#3C929A" d="M0,156 106,136 272,172 342,124 366,144 366,256 0,256z" />
+    <path fill="#4286f4" d="M0,170 62,160 235,148 305,145 366,153 366,256 0,256z" />
+    <g data-id="1">
+      <path fill="#389296" d="M54,127 C77,127 62,95 54,63 C46,95 31,127 54,127" />
+      <path d="M56,147 Q55,115 54,83 Q53,115 52,146" />
+    </g>
+    <g data-id="2">
+      <path fill="#389296" d="M67,124 C90,124 75,92 67,59 C59,92 44,124 67,124" />
+      <path d="M69,144 Q68,112 67,80 Q66,112 65,143" />
+    </g>
+    <g data-id="3">
+      <path fill="#389296" d="M264,129 C287,129 272,97 264,64 C256,97 241,129 264,129" />
+      <path d="M266,149 Q265,117 264,85 Q263,117 262,148" />
+    </g>
+    <g data-id="4">
+      <path fill="#207277" d="M287,128 C310,128 295,96 287,63 C279,96 264,128 287,128" />
+      <path d="M289,148 Q288,116 287,84 Q286,116 285,147" />
+    </g>
+    <g data-id="5">
+      <path fill="#389296" d="M313,128 C336,128 321,96 313,63 C305,96 290,128 313,128" />
+      <path d="M315,148 Q314,116 313,84 Q312,116 311,147" />
+    </g>
+  </g>
+</svg>
+</div>
+<!-- 1st Row For Weather Date-time and Quote -->
+<div class="container-fluid py-2" style="background-color:#4286f4">
+  <!-- for weather loading animation -->
+  <div id="weatherLoadAnim" class="text-center" style="margin: 1rem auto;">
+    <div class="spinner-grow text-success" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-grow text-danger" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-grow text-warning" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+  <div class="row font-2">
+    <!-- Collum 1 for Weather -->
+    <div class="col-md-4 card mx-2 my-2 p-0">
+      <div class="card-header text-white grad-19 text-white text-center font-4 p-2">
+        <i class="fas fa-cloud-moon-rain"></i> Weather Info:
+      </div>
+      <div class="card-body" id="wthr">
+        <p class="mx-3">
+          <i class="fas fa-map-marker-alt"></i> Location:
+          <span id="location"></span>
+          <span>
+            <a class="" data-toggle="modal" data-target="#locationModal">
+              <i class="fas fa-edit"></i>
+            </a>
+            <!-- Location Modal -->
+            <div class="modal fade" id="locationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Weather of Your Location</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="form-group">
+                      <label for="exampleFormControlSelect1">Select Your Division</label>
+                      <select class="form-control" id="divisionList" onchange="selectDistrict()">
+                        <option value="Barisal">Barisal</option>
+                        <option value="Chittagong">Chittagong</option>
+                        <option value="Dhaka">Dhaka</option>
+                        <option value="Khulna">Khulna</option>
+                        <option value="Mymensingh">Mymensingh</option>
+                        <option value="Rajshahi" selected="selected">Rajshahi</option>
+                        <option value="Rangpur">Rangpur</option>
+                        <option value="Sylhet">Sylhet</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlSelect1">Select Your District</label>
+                      <select class="form-control" id="districtList" onchange="">
+                        <option value="Bogra">Bogra</option>
+                        <option value="Chapainawabganj">Chapainawabganj</option>
+                        <option value="Joypurhat">Joypurhat</option>
+                        <option value="Naogaon">Naogaon</option>
+                        <option value="Natore">Natore</option>
+                        <option value="Pabna">Pabna</option>
+                        <option value="Rajshahi" selected="selected">Rajshahi</option>
+                        <option value="Sirajganj">Sirajganj</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="myLocationWeather()" data-dismiss="modal" aria-label="Close">Save changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </span>
+        </p>
+        <p class="mx-3">
+          <i class="fas fa-temperature-low"></i> Temperature: <span id="temp"></span>
+        </p>
+        <p class="mx-3">
+          <i class="fas fa-cloud-sun"></i> Status: <span id="weather"></span>
+        </p>
+        <p class="mx-3">
+          <i class="fas fa-thermometer"></i> Humidity: <span id="humidity"></span>
+        </p>
+      </div>
+    </div>
+    <!-- Collum 2 for Date and time -->
+    <div class="col-md-4 card mx-2 my-2 p-0">
+      <div class="card-header text-white grad-19 text-white text-center font-4 p-2">
+        <i class="far fa-clock"></i> Time and Date
+      </div>
+      <div class="card-body" id="calender">
+        <p class="mx-3">
+          <i class="far fa-clock"></i>&nbsp;<span id="timeView"></span>
+        </p>
+        <p class="mx-3">
+          <i class="fas fa-calendar"></i>&nbsp;<span id="dayView"></span>
+        </p>
+        <p class="mx-3">
+          <i class="far fa-calendar-alt"></i>&nbsp;<span id="dateView"></span>
+        </p>
+        <p class="font-bangla mx-3">
+          <i class="far fa-calendar-alt"></i>&nbsp;<span id="dateViewBangla"></span>
+        </p>
+      </div>
+    </div>
+    <!--Collum 3 For Random Qoutes -->
+    <div class="col card  mx-2 my-2 p-0">
+      <div class="card-header text-white grad-19 text-center font-4 p-2">
+        <i class="fas fa-quote-right"></i> A quote for you
+      </div>
+      <div class="card-body overflow-auto" id="quote">
+        <p id="quoteText" class="">
+          You can't stop learning because life won't stop teachung you.
+        </p>
+        <footer class="blockquote-footer">
+          <span id="quoteAuthor">Unknown Author</span>
+        </footer>
+        <button type="button" onclick="anotherQuote()" class="btn btn-outline-success btn-sm">Read Another</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 2nd Row For page links-->
+<div class="container-fluid py-3 grad-33">
+  <div class="row p-0 font-2">
+    <div class=" card  m-2 p-0">
+      <div class="card-header grad-3 text-center text-white font-4 p-2">
+        <i class="fas fa-user-edit"></i> My Featured Pages
+      </div>
+      <div class="card-body p-0 overflow-hidden">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card-body">
+              <img src="img/profile.png" class="img-fluid" alt="Responsive image">
+              <h5 class="card-title font-8"> <i class="fas fa-user"></i> Know More About Me</h5>
+              <p class="card-text text-muted">
+                Visit my about page if you want to know more about me. All about my education, skills, contacts are given there.
+              </p>
+              <a href="#!about" class="btn btn-primary">Go to About Page</a>
+            </div>
+            <hr class="d-sm-block d-md-none" />
+          </div>
+          <div class="col-md-4">
+            <div class="card-body">
+              <img src="img/project.png" class="img-fluid" alt="Responsive image">
+              <h5 class="card-title font-8"><i class="fas fa-project-diagram"></i> &nbsp; See My Projects</h5>
+              <p class="card-text text-muted">
+                This page contains all of my web application projects. You may visit if you are interested on my projects. Some of them may be helpful for you.
+              </p>
+              <a href="#!projects" class="btn btn-primary">Go to Projects Index</a>
+            </div>
+            <hr class="d-sm-block d-md-none" />
+          </div>
+          <div class="col">
+            <div class="card-body">
+              <img src="img/blogs.png" class="img-fluid" alt="Responsive image">
+              <h5 class="card-title font-8"> <i class="fas fa-tasks"></i>&nbsp; Read My Blogs</h5>
+              <p class="card-text text-muted">
+                Here I will post articles on various topics. Go and read the latest one and enhance your knowlege.
+              </p>
+              <a href="#!blogs" class="btn btn-primary">Go to Blogs Index</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

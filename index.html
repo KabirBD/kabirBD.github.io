@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<!-- Head Section -->
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Search bar theme change -->
+  <meta name="theme-color" content="#4d004d">
+  <meta name="msapplication-navbutton-color" content="#4d004d">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#4d004d">
+
+  <!-- For fab icon -->
+  <link rel="shortcut icon" href="icon.png" type="image/png" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+  <!-- Angular -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+  <!-- My style -->
+  <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+
+  <!-- Title of my site -->
+  <title>Kabir BD</title>
+
+</head>
+
+<!-- Body Section -->
+<body ng-app="myApp">
+  <!-- For navigation bar -->
+  <nav id="navbar" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top box-shadow py-0 nav-image">
+    <img src="icon.png" class="rounded-circle border" alt="logo" height="35px">
+    <a class="navbar-brand title-size m-0  font-5 mx-3"><span class="text-danger">K</span>abir <span class="text-danger">B</span><span class="">D</span></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav font-3">
+        <a class="nav-item nav-link" id="home" href="#"> <i class="fas fa-home"></i>&nbsp;&nbsp; Home <br /></a>
+        <a class="nav-item nav-link" id="about" href="#!about"> <i class="fas fa-address-card"></i>&nbsp;&nbsp; About <br /></a>
+        <a class="nav-item nav-link" id="projects" href="#!projects"> <i class="fas fa-project-diagram"></i> &nbsp;&nbsp;Projects <br /></a>
+        <a class="nav-item nav-link" id="blogs" href="#!blogs"> <i class="fas fa-tasks"></i>&nbsp;&nbsp; Blogs <br /></a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Empty place for navbar -->
+  <div class="nav-space">
+  </div>
+
+  <!-- Place for Page view -->
+  <div id="pageView" ng-view>
+  </div>
+
+  <!-- For messeneger icon -->
+  <div class="bottom-right d-sm-block d-md-none" style="z-index:10">
+    <a href="https://msngr.pro/fb/kabir.nmr/"><i class="fab fa-facebook-messenger fa-2x"></i></a>
+  </div>
+
+  <!-- Footer of the site -->
+  <footer class=" font-2 container-fluid bg-dark my-0 py-3 text-light nav-image">
+    <p class="mb-0 text-center">
+      © <span id="copyRightDate"></span> kabirbd.github.io
+    </p>
+    <p class="mb-0 font-8 text-center">
+      <a href="#">Back to top </a>|
+      <a href="#">Privacy </a>|
+      <a href="#">Terms</a>
+    </p>
+  </footer>
+
+  <!-- Bootstrap js -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+  <!-- Typed js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.9/typed.min.js" async defer></script>
+
+  <!-- Moment js for date and time -->
+  <script src="moment.min.js" type="text/javascript" charset="utf-8"></script>
+
+  <!-- My js -->
+  <script src="angularApp.js"></script>
+  <script src="main.js"></script>
+
+</body>
+</html>
